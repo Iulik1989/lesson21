@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>To do list</title>
+</head>
+
+<body>
+
+
+    <div class="addToDoContainer">
+        <input id="toDoTitle" placeholder="to do title" class="toDoTitleInput" />
+        <button class="addToDoBtn" id="addToDoBtn">Add to do</button>
+    </div>
+
+    <div class="listContainer">
+        <div class="toDoListWrapper">
+            <div class="listTitleWrapper" onclick="sortIncompleteToDo()">
+                <h2 class="listTitle">To do list:</h2>
+                <img id="sortToDoIcon" class="icon" src="./assets/sort-arrow.png" alt="sort-icon">
+            </div>
+            <ul class="toDoList" id="toDoList"></ul>
+
+        </div>
+
+        <div class="toDoListWrapper">
+            <div class="listTitleWrapper" onclick="sortCompleteToDo()">
+                <h2 class="listTitle">Completed to do:</h2>
+                <img id="sortDoneToDoIcon" class="icon" src="./assets/sort-arrow.png" alt="sort-icon">
+            </div>
+            <ul class="toDoList" id="completeToDo"></ul>
+        </div>
+    </div>
+
+
+    <div class="editToDoWrapper">
+        <div class="editModal">
+            <div class="edit-modal-close-icon" id="edit-modal-close-icon" onclick="toggleModal()">
+                <img src="./assets/close-icon.png" alt="close icon">
+            </div>
+            <input id="editToDoTitle" placeholder="change to do title" class="toDoTitleInput" />
+            <button class="addToDoBtn" id="editToDoBtn">Save</button>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
